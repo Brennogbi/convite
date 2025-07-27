@@ -1,0 +1,166 @@
+/* Reset e fonte padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+  background-image: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container do convite */
+.convite {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+/* Nome dos noivos */
+.convite h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #6c9a7e;
+  margin-bottom: 20px;
+}
+
+/* Envelope */
+.envelope {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.envelope:hover {
+  transform: scale(1.05);
+}
+.envelope i {
+  font-size: 100px;
+   color: #6c9a7e;
+}
+.envelope .abrir {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Conteúdo oculto */
+.conteudo {
+  display: none;
+  margin-top: 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+       
+       
+.logo{
+
+  
+
+
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* deixa redonda */
+  border: 5px solid #6c9a7e; /* borda com a cor desejada */
+  object-fit: cover; /* garante que a imagem preencha sem distorcer */
+
+}
+
+/* Estilo base dos balões */
+.imagem i {
+  color: #6c9a7e;
+  font-size: 60px;
+  animation: flutuar 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Animação de flutuação (subir e descer) */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Atrasos diferentes para animar em tempos distintos */
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 1s;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.data {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.icones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.icones div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #4c7a57;
+  transition: transform 0.3s;
+}
+.icones div:hover {
+  transform: scale(1.1);
+}
+.icones i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.interaja {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+.chamada{
+
+   font-family: 'Dancing Script', cursive;
+  font-size: 1rem;
+  color: #6c9a7e;
+  margin-bottom: 20px;
+}
+/* Responsivo */
+@media (max-width: 400px) {
+  .icones {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
